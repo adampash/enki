@@ -10,7 +10,7 @@ gem 'rails', '~> 4.0.0'
 gem 'sass-rails'
 
 platforms :ruby do
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 platforms :jruby do
