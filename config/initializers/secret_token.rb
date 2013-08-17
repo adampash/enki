@@ -11,6 +11,6 @@ else
 
   # If this is an open source project, DO NOT commit your secret to source
   # control. Load it from ENV or a file that is git ignored (File.read)
-  Enki::Application.config.secret_token    = ENV['SECRET_TOKEN']
-  Enki::Application.config.secret_key_base = ENV['SECRET_TOKEN']
+  Enki::Application.config.secret_token    = 'fb55d381664355e770b699e446b2fccc267fbad111c65186724fd49cba7c1b204e35e0a31f6e0aefcb816504c2f8f9e71cea399a020f583cebfed3baea83af6c'
+  Enki::Application.config.secret_key_base = 'fb55d381664355e770b699e446b2fccc267fbad111c65186724fd49cba7c1b204e35e0a31f6e0aefcb816504c2f8f9e71cea399a020f583cebfed3baea83af6c'
 end
