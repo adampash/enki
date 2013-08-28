@@ -13,12 +13,12 @@ platforms :ruby do
   gem 'pg'
 end
 
-platforms :jruby do
-  # The stable version has not yet supported Rails 4
-  gem 'activerecord-jdbcsqlite3-adapter', '1.3.0.beta2'
-  gem 'trinidad'
-  gem 'jruby-openssl'
-end
+# platforms :jruby do
+#   # The stable version has not yet supported Rails 4
+#   gem 'activerecord-jdbcsqlite3-adapter', '1.3.0.beta2'
+#   gem 'trinidad'
+#   gem 'jruby-openssl'
+# end
 
 gem 'jquery-rails'
 
