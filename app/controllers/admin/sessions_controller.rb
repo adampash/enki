@@ -19,9 +19,12 @@ class Admin::SessionsController < ApplicationController
       flash.now[:error] = "You must provide an OpenID URL"
       render :action => 'new'
     else
+      logger.debug('go on creating')
       authenticate_with_open_id(params[:openid_url]) do |result, identity_url|
         if result.successful?
+          logger.debug('success!')
           if enki_config.author_open_ids.include?(URI.parse(identity_url))
+            logger.debug('double success!')
             return successful_login
           else
             flash.now[:error] = "You are not authorized"
@@ -43,6 +46,7 @@ protected
 
   def successful_login
     session[:logged_in] = true
+    logger.debug("session[:logged_in] = " + session[:logged_in].to_s)
     redirect_to(admin_root_path)
   end
 
